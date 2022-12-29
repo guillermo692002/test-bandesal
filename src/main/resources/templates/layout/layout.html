@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title th:text="${title}" ></title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap_5_0_2.min.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body >
+<header class="container-fluid bg-dark" th:fragment="header">
+    <h1 class="py-1 fs-1 fw-bold text-white text-center"> BANCO DE DESARROLLO DE EL SALVADOR</h1>
+</header>
+
+<main th:fragment="greeting">
+    <p class="py-1 fw-bold">Bienvenidos/as</p>
+</main>
+
+<aside class="bg-dark p-1" th:fragment="aside" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid d-flex flex-column justify-content-center">
+            <a class="navbar-brand" th:href="@{/readers}">Reader</a>
+            <a class="navbar-brand" th:href="@{/blogs}">Blog</a>
+            <a class="navbar-brand" th:href="@{readers_blogs}">Reader per Blog</a>
+        </div>
+    </nav>
+</aside>
+
+<footer class="container-fluid bg-dark" th:fragment="footer">
+    <script th:src="@{/js/bootstrap_5_0_2.min.js}" ></script>
+</footer>
+</body>
+</html>
